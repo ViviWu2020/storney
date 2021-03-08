@@ -23,9 +23,19 @@
 
 <style lang="scss" scoped>
   @import "~@/assets/style/helper.scss";
-  nav {
+  .nav-wrapper{
     display: flex;
-    box-shadow: 0 0 3px rgb(0,0,0,0.3);
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .content{
+    overflow: auto;
+    flex-grow: 1;
+
+  }
+  nav {
+    @extend %outerShadow;
+    display: flex;
     font-size: 12px;
     > .item{
       padding: 2px 0;
